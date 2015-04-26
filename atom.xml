@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Figuring it out... One step at a time.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://ericmbarnard.com/"/>
-  <updated>2015-04-25T22:14:00.694Z</updated>
+  <updated>2015-04-26T13:26:56.737Z</updated>
   <id>http://ericmbarnard.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://ericmbarnard.com/2015/04/leaving-learning-teaching.html"/>
     <id>http://ericmbarnard.com/2015/04/leaving-learning-teaching.html</id>
     <published>2015-04-10T12:00:00.000Z</published>
-    <updated>2015-04-25T22:14:00.694Z</updated>
-    <content type="html"><![CDATA[<p>Today is my last day at Codagami. It’s been almost exactly 3 years since I started, and I can’t say enough about how much I’ve learned and grown over those three years. I’m moving on for a multitude of reasons - some bigger than others and some smaller. But most importantly I’m moving on to continue growing and challenging myself in new directions.</p>
+    <updated>2015-04-26T13:26:56.737Z</updated>
+    <content type="html"><![CDATA[<p>Today is my last day at Codagami. It’s been almost exactly 3 years since I started, and I can’t say enough about how much I’ve learned and grown over those three years. I’m moving on for a multitude of reasons - some bigger than others and some smaller - nothing bad. Most importantly, though, I’m moving on to continue growing and challenging myself in new directions.</p>
 <h2 id="The_Details">The Details</h2><p>First, I’m leaving because eventually I’ll be starting a new position with our local community college, <a href="http://www.parkland.edu/" target="_blank" rel="external">Parkland College</a> as an instructor in their Computer Science and Information Technology department. I’m taking this position because I’ve always loved the teaching experiences I’ve had with any role I’ve been in and I’ve wanted to get closer to that area with my career moves than further. I’ll start by teaching a summer course or two and then begin full-time teaching in the fall.</p>
 <p>As part of the new role I’ll be taking with Parkland, I am being given the opportunity to help coordinate some major updates to their software development curriculum and programs. I realize this will be a lot of work, but at the end of the day I am pretty stoked about the idea that I’ll be able to apply my industry experience into the degree programs we’ll be offering. The challenge of trying to build an ever-evolving curriculum that keeps up with an industry that changes as quickly as ours is definitely not going to be easy - but as I’ve gotten older I’ve realized those are the types of challenges that make me want to get up in the morning.</p>
 <p>So, you might be wondering… what on earth am I going to be doing between now and the fall (and the future summers for that matter)? Well - I’ll be working for myself.  This actually supplements my new role quite well, as staying in-tune with the industry from both a technical and relationship level will continue to give me that <em>“real-world”</em> experience I’ll need as I work with students and develop curriculum.</p>
@@ -39,7 +39,7 @@
     <link href="http://ericmbarnard.com/2013/01/my-first-book-is-out.html"/>
     <id>http://ericmbarnard.com/2013/01/my-first-book-is-out.html</id>
     <published>2013-01-06T21:20:00.000Z</published>
-    <updated>2015-04-25T22:13:10.272Z</updated>
+    <updated>2015-04-26T13:20:44.396Z</updated>
     <content type="html"><![CDATA[<img src="/images/my_first_book_is_out.jpg">
 <p>I’m pretty excited to announce that my first book, <a href="http://www.packtpub.com/knockoutjs-starter/book" target="_blank" rel="external">KnockoutJS Starter</a>, was recently published. If my blog looked dead for the past several months, it was due to this little project (and a few other things).</p>
 <p>Please check it out and leave any feedback/comments here. I would like to write another JavaScript book and constructive feedback would be really appreciated!</p>
@@ -53,6 +53,8 @@
       <category term="JavaScript" scheme="http://ericmbarnard.com/tags/javascript/"/>
     
       <category term="KnockoutJS" scheme="http://ericmbarnard.com/tags/knockoutjs/"/>
+    
+      <category term="Development" scheme="http://ericmbarnard.com/categories/development/"/>
     
   </entry>
   
@@ -102,7 +104,7 @@
     <link href="http://ericmbarnard.com/2012/07/getting-started-with-localdb.html"/>
     <id>http://ericmbarnard.com/2012/07/getting-started-with-localdb.html</id>
     <published>2012-07-04T22:12:06.000Z</published>
-    <updated>2015-04-25T22:20:56.429Z</updated>
+    <updated>2015-04-26T14:11:57.688Z</updated>
     <content type="html"><![CDATA[<p>With the launch of SQL Server 2012, a new product called “LocalDB” was launched. This new toy is a great fit for needs that fall somewhere in the space between SQL Express and SQL Compact.</p>
 <p>While you can read the full list of features for LocalDB, I’ll highlight a few below:</p>
 <ul>
@@ -133,13 +135,84 @@
 <p>If I’ve created the “Northwind” Named instance as above, and I go to the default folder, I will see:</p>
 <img src="/images/getting-started-with-local-db-03.png">
 <p>Inside each of these folders are your typical “master.mdf” , “temp.mdf”, log files, etc… If you want to create your database’s “.mdf” and “.ldf” files in a separate directory, you can easily do that by specifying the location when running a T-SQL statement to “CREATE DATABASE …”. Specifying where your data lives is not really any different than what you’ve done with SQL Server in the past.</p>
-<p>If you want to point your application to specific ‘.mdf” or “.ldf” files at runtime, you can specify that in your connection string using the “AttachDbFileName” attribute, you can also read more <a href="&quot;https://msdn.microsoft.com/en-us/library/hh309441.aspx&quot;">here</a>.</p>
+<p>If you want to point your application to specific ‘.mdf” or “.ldf” files at runtime, you can specify that in your connection string using the “AttachDbFileName” attribute, you can also read more <a href="https://msdn.microsoft.com/en-us/library/hh309441.aspx" target="_blank" rel="external">here</a>.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>With the launch of SQL Server 2012, a new product called “LocalDB” was launched. This new toy is a great fit for needs that fall somewher]]>
     </summary>
     
       <category term="SQL" scheme="http://ericmbarnard.com/tags/sql/"/>
+    
+      <category term="Development" scheme="http://ericmbarnard.com/categories/development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JavaScript Basics - Native Stuff]]></title>
+    <link href="http://ericmbarnard.com/2011/11/javascript-basics-native-stuff.html"/>
+    <id>http://ericmbarnard.com/2011/11/javascript-basics-native-stuff.html</id>
+    <published>2011-11-01T13:29:23.000Z</published>
+    <updated>2015-04-26T14:12:04.583Z</updated>
+    <content type="html"><![CDATA[<p>For a while I’ve been wanting to write about some core things that I’ve learned while creating complex JavaScript applications. Not necessarily ‘begginer’ things, but I guess someone could use these as so.</p>
+<p>I also build on the .NET platform. Think what you will, but I like it… and I’ve written Ruby (liked it too), and love JavaScript (a dynamic language at that) development.</p>
+<p>First off JavaScript does have some core types that should be understood. My attempt to describe them below is for someone coming from a strongly typed world:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Boolean</code></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td><code>String</code></td>
+<td>character array</td>
+</tr>
+<tr>
+<td><code>Number</code></td>
+<td>float (can be used as integer, decimal, etc…)</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td>null</td>
+</tr>
+<tr>
+<td><code>undefined</code></td>
+<td>basically non-existent, values can’t be initialized to <code>undefined</code></td>
+</tr>
+<tr>
+<td><code>Object</code></td>
+<td>essentially a dictionary/hash table of key values</td>
+</tr>
+<tr>
+<td><code>Array</code></td>
+<td>not really a true array, but an object with numerical keys, and native manipulation functions. Think more ‘special object’ than ordered sets in memory</td>
+</tr>
+<tr>
+<td><code>Function</code></td>
+<td>objects that can be invoked, but still can exist as singular objects</td>
+</tr>
+</tbody>
+</table>
+<p>So lets address the first big question, what’s the difference between <code>null</code> and <code>undefined</code>? <code>null</code> and <code>undefined</code> are very similar, however <code>undefined</code> seems to be what most browsers use to indicate something hasn’t been declared or initialized. <code>null</code> is something that is used when you perhaps want to initialize an object or property, but don’t want it to have a value.</p>
+<p>Ok, so how about this Array vs Object thing? First off, Arrays DO have the following properties/methods:<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line">arr.length; <span class="comment">// Number</span></span><br><span class="line">arr.push    <span class="comment">// Function</span></span><br><span class="line">arr.shift;  <span class="comment">// Function</span></span><br><span class="line">arr.unshift; <span class="comment">// Function</span></span><br><span class="line">arr.splice; <span class="comment">// Function</span></span><br><span class="line">arr.slice;  <span class="comment">// Function</span></span><br><span class="line">arr.pop;    <span class="comment">// Function</span></span><br><span class="line">arr.join;   <span class="comment">// Function</span></span><br><span class="line">arr.concat; <span class="comment">// Function</span></span><br></pre></td></tr></table></figure></p>
+<p>I won’t get into those here, especially when you have <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank" rel="external">this</a></p>
+<p>However, depending on the browser that you are using, these are not usually the super-efficient data structures that we’re used to. They are still very useful, I just want you to be informed.</p>
+<p>Lastly, what is this <code>Function</code> thing?</p>
+<p>Functions, like I mentioned, can be invoked and have parameters passed to them (they can do a lot more, but I can’t put it all in one post, right?) Essentially a <code>Function</code> is an object that you can create and execute logic inside. You can hang it off of a regular object and make a method (like we’re normally used to) or some other fancy things we’ll get to.</p>
+<p>Here’s a decent example of building out a basic object:<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> car = &#123;&#125;; <span class="comment">//a new object</span></span><br><span class="line">car.name = <span class="string">"Corvette"</span>; <span class="comment">//a string</span></span><br><span class="line">car.maxSpeed = <span class="number">155</span>; <span class="comment">//a number</span></span><br><span class="line">car.currentSpeed = <span class="literal">null</span>; <span class="comment">//initializing to null</span></span><br><span class="line">car.honk = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123; <span class="comment">//a function</span></span><br><span class="line">    alert(<span class="string">"Honk"</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>A couple things you may have noticed so far… creating new objects and arrays.<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">//Dont' do</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Don't do</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br></pre></td></tr></table></figure></p>
+<p>Use the shorthand and not the “new” keyword for native objects. Its pointless and is extra keysstrokes for your fingers.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>For a while I’ve been wanting to write about some core things that I’ve learned while creating complex JavaScript applications. Not neces]]>
+    </summary>
+    
+      <category term="JavaScript" scheme="http://ericmbarnard.com/tags/javascript/"/>
     
       <category term="Development" scheme="http://ericmbarnard.com/categories/development/"/>
     
