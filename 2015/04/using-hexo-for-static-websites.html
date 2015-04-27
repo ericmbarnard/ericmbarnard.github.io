@@ -9,9 +9,9 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="description" content="Personal blog of Eric M Barnard">
 
-    <title>Getting Started with LocalDB</title>
+    <title>Using Hexo for Static Websites</title>
 
-    <link rel="canonical" href="/2012/07/getting-started-with-localdb.html">
+    <link rel="canonical" href="/2015/04/using-hexo-for-static-websites.html">
 
     
         <script>
@@ -84,7 +84,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">s
                 <div class="post-heading">
-                    <h1>Getting Started with LocalDB</h1>
+                    <h1>Using Hexo for Static Websites</h1>
                     
                 </div>
             </div>
@@ -98,57 +98,35 @@
     <div class="container">
         <div  class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <span class="meta"><em>July 4th 2012</em></span>
+                <span class="meta"><em>April 27th 2015</em></span>
                 <hr/>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>With the launch of SQL Server 2012, a new product called “LocalDB” was launched. This new toy is a great fit for needs that fall somewhere in the space between SQL Express and SQL Compact.</p>
-<p>While you can read the full list of features for LocalDB, I’ll highlight a few below:</p>
+				<h2 id="The_Problem">The Problem</h2><p>I’ve been doing some work to setup some basic websites (and moving my blog off of blogger). I really wanted to take advantage of a <a href="https://www.staticgen.com/" target="_blank" rel="external">static site generator</a>, and I wanted to utilize some of the best cheap hosting I could find (i.e. free). I know that I can point a custom domain to a <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> repository for nothing. GitHub Pages supports Jekyll as a static site generator - but I really didn’t want to have to go down the road of setting up Jekyll on my Windows machine (it runs on Ruby and I’ve had very little luck with all the Ruby Windows installation tools out there). I’m not against Ruby, and I have a Mac partition on my machine - but it’s not my primary working environment. <strong>What I really want is site generator that runs on both platforms, like on NodeJS.</strong></p>
+<h2 id="Enter_Hexo">Enter <a href="https://www.hexo.io" target="_blank" rel="external">Hexo</a></h2><p>I’ll spare the intro to Hexo - but suffice it to say it’s one of the more (if not most) popular NodeJS-based site generators out there. It’s actively contributed to (from folks all over the world) - and I found it quite easy to grok once I got started. The <a href="https://hexo.io/docs/" target="_blank" rel="external">Docs</a> are pretty good, and I was able to pretty much completely move my blog and build a custom theme over the course of a couple evenings.</p>
+<h2 id="Why_Hexo?">Why Hexo?</h2><p>There were a number of things that helped me land on Hexo. For the most part it came down to: </p>
 <ul>
-<li>Easy, and simple MSI to install. I’ve had very little problems with this, and it is light-years better than trying to setup SQL Express</li>
-<li>Ability to control user access to the database</li>
-<li>Supports virtually all features of SQL Express (Stored Procedures, Triggers, … even some basic Replication)</li>
-<li>Not an extra service on your machine to manage</li>
+<li>GitHub-Flavored Markdown support</li>
+<li>Official support for LESS</li>
+<li><a href="https://hexo.io/docs/permalinks.html" target="_blank" rel="external">Permalink</a>-extensibility (so I could prevent broken links when migrating sites)</li>
+<li>Easily customizable themes</li>
+<li><a href="http://ejs.co/" target="_blank" rel="external">EJS</a> support (more on that below)</li>
+<li>Supported deployment story with Git and GitHub</li>
 </ul>
-<p>Initially, there was some confusion as to whether LocalDB was high-powered file-based database or just a dumbed-down version of SQL Express. I’m not going to debate the semantics of what it is exactly, but I will tell you that you get your standard “.mdf” and “.ldf” files with LocalDB. However, the MSI installs some central libraries and an engine that power the LocalDB instances. The engine does have to have some knowledge as to the existence of any instances of LocalDB in order for those to work. So if you were looking for something where you can just drop a file into a directory and it will just work… not quite, but close.</p>
-<h2 id="Instances">Instances</h2><p>LocalDB has the notion of “Automatic” and “Named” instances. Per version of LocalDB installed on your machine, there is only one “Automatic” instance per user. You can think of this as the default “SQLEXPRESS” instance that is installed when you first download and install SQL Express on a machine, only it is unique per user on the machine. So if you create an application that creates and uses the “Automatic” instance of LocalDB and this application is installed on a machine with 3 different user accounts, you will have 3 different “.mdf” and “.ldf” files after each user logs in and uses the application the first time.  This “Automatic” instance is:</p>
-<ul>
-<li>“Public” – meaning any application process under the user’s account can access the instance when logged into a machine</li>
-<li>Accessed via the connection string “(localdb){major version}” – which for right now means you’ll use “(localdb)\v11.0”</li>
-</ul>
-<img src="/images/getting-started-with-local-db-01.png">
-<ul>
-<li>Great for development purposes when you need to just throw together a DB and ship something</li>
-</ul>
-<h2 id="Named_Instances">Named Instances</h2><p>The “Named” instance of LocalDB refers to private instances of a database that you can setup. These are useful if you want an application to have a separate, private database per user on a machine (a “Named” instance will run in a separate process under the current user on a machine).</p>
-<h2 id="Sharing_Instances">Sharing Instances</h2><p>So what if you want to allow multiple users on a machine to have access to a single LocalDB database instance? Well you can also “share” a “Named” instance of LocalDB. You can control who the instance is shared with, and you can enable/disable sharing at any time.</p>
-<p>When connecting with a shared instance, your connection string will need to include an extra “.\” in the server portion. Going with the example above, one would use: “(localdb).\MySharedInstance”. This tells the engine that this is a shared instance.</p>
-<h2 id="SqlLocalDb_Utility">SqlLocalDb Utility</h2><p>When you install LocalDB on a machine, it also installs the SqlLocalDb command line utility. It’s pretty simple to use, and allows you to setup batch files to control the creation of your LocalDB’s. One of the first things I do is create a “SetupDb.cmd” file in my source code folder of an app I’m building. This allows other devs to easily replicate setting up a development database on their machine in the same way.</p>
-<img src="/images/getting-started-with-local-db-02.png">
-<h2 id="Where_Does_Everything_Go?">Where Does Everything Go?</h2><p>One of my first questions was, where are the actual database files?</p>
-<blockquote>
-<p>The default is: “C:\Users{USER}\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances”</p>
-</blockquote>
-<p>If I’ve created the “Northwind” Named instance as above, and I go to the default folder, I will see:</p>
-<img src="/images/getting-started-with-local-db-03.png">
-<p>Inside each of these folders are your typical “master.mdf” , “temp.mdf”, log files, etc… If you want to create your database’s “.mdf” and “.ldf” files in a separate directory, you can easily do that by specifying the location when running a T-SQL statement to “CREATE DATABASE …”. Specifying where your data lives is not really any different than what you’ve done with SQL Server in the past.</p>
-<p>If you want to point your application to specific ‘.mdf” or “.ldf” files at runtime, you can specify that in your connection string using the “AttachDbFileName” attribute, you can also read more <a href="https://msdn.microsoft.com/en-us/library/hh309441.aspx" target="_blank" rel="external">here</a>.</p>
+<p>I mentioned EJS templating support. I realize that there are tons of other new and shiny templating languages out there - but one thing I really like about EJS is the fact that, as a developer, I can drop down and write raw JavaScript (the language EJS is written in) to get things done. A lot of other templating languages might be written in a different language but supported in Hexo (or other static site generators) by having a wrapper layer over them… which generally means there’s not a good story for working with the bare language if need be. </p>
+<p>Overall, I’m pretty happy with Hexo and I hope I get some more chances to use it. I still primarily work in .NET and JavaScript - so I’m not making some big jump to web-design-only work, but this was a fun little project. You can check out the <a href="https://github.com/ericmbarnard/ericmbarnard.github.io-hexo" target="_blank" rel="external">source</a> of this blog and see what I did.</p>
 
 
                 <hr>
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2012/07/debugging-elmah-on-azure.html" data-toggle="tooltip" data-placement="top" title="Debugging Elmah on Azure">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2011/11/javascript-basics-native-stuff.html" data-toggle="tooltip" data-placement="top" title="JavaScript Basics - Native Stuff">Next Post &rarr;</a>
+                        <a href="/2015/04/leaving-learning-teaching.html" data-toggle="tooltip" data-placement="top" title="Leaving, Learning and Teaching">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -214,7 +192,7 @@
 <!-- scripts -->
 <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/clean-blog.min.js?_=1430145341388" type="text/javascript" ></script>
+<script src="/js/clean-blog.min.js?_=1430145341372" type="text/javascript" ></script>
 <!-- disqus -->
 
     <script type="text/javascript">

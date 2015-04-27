@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Figuring it out... One step at a time.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://ericmbarnard.com/"/>
-  <updated>2015-04-26T13:26:56.737Z</updated>
+  <updated>2015-04-27T14:32:53.814Z</updated>
   <id>http://ericmbarnard.com/</id>
   
   <author>
@@ -13,6 +13,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Using Hexo for Static Websites]]></title>
+    <link href="http://ericmbarnard.com/2015/04/using-hexo-for-static-websites.html"/>
+    <id>http://ericmbarnard.com/2015/04/using-hexo-for-static-websites.html</id>
+    <published>2015-04-27T12:56:35.000Z</published>
+    <updated>2015-04-27T14:32:53.814Z</updated>
+    <content type="html"><![CDATA[<h2 id="The_Problem">The Problem</h2><p>I’ve been doing some work to setup some basic websites (and moving my blog off of blogger). I really wanted to take advantage of a <a href="https://www.staticgen.com/" target="_blank" rel="external">static site generator</a>, and I wanted to utilize some of the best cheap hosting I could find (i.e. free). I know that I can point a custom domain to a <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> repository for nothing. GitHub Pages supports Jekyll as a static site generator - but I really didn’t want to have to go down the road of setting up Jekyll on my Windows machine (it runs on Ruby and I’ve had very little luck with all the Ruby Windows installation tools out there). I’m not against Ruby, and I have a Mac partition on my machine - but it’s not my primary working environment. <strong>What I really want is site generator that runs on both platforms, like on NodeJS.</strong></p>
+<h2 id="Enter_Hexo">Enter <a href="https://www.hexo.io" target="_blank" rel="external">Hexo</a></h2><p>I’ll spare the intro to Hexo - but suffice it to say it’s one of the more (if not most) popular NodeJS-based site generators out there. It’s actively contributed to (from folks all over the world) - and I found it quite easy to grok once I got started. The <a href="https://hexo.io/docs/" target="_blank" rel="external">Docs</a> are pretty good, and I was able to pretty much completely move my blog and build a custom theme over the course of a couple evenings.</p>
+<h2 id="Why_Hexo?">Why Hexo?</h2><p>There were a number of things that helped me land on Hexo. For the most part it came down to: </p>
+<ul>
+<li>GitHub-Flavored Markdown support</li>
+<li>Official support for LESS</li>
+<li><a href="https://hexo.io/docs/permalinks.html" target="_blank" rel="external">Permalink</a>-extensibility (so I could prevent broken links when migrating sites)</li>
+<li>Easily customizable themes</li>
+<li><a href="http://ejs.co/" target="_blank" rel="external">EJS</a> support (more on that below)</li>
+<li>Supported deployment story with Git and GitHub</li>
+</ul>
+<p>I mentioned EJS templating support. I realize that there are tons of other new and shiny templating languages out there - but one thing I really like about EJS is the fact that, as a developer, I can drop down and write raw JavaScript (the language EJS is written in) to get things done. A lot of other templating languages might be written in a different language but supported in Hexo (or other static site generators) by having a wrapper layer over them… which generally means there’s not a good story for working with the bare language if need be. </p>
+<p>Overall, I’m pretty happy with Hexo and I hope I get some more chances to use it. I still primarily work in .NET and JavaScript - so I’m not making some big jump to web-design-only work, but this was a fun little project. You can check out the <a href="https://github.com/ericmbarnard/ericmbarnard.github.io-hexo" target="_blank" rel="external">source</a> of this blog and see what I did.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="The_Problem">The Problem</h2><p>I’ve been doing some work to setup some basic websites (and moving my blog off of blogger). I really]]>
+    </summary>
+    
+      <category term="JavaScript" scheme="http://ericmbarnard.com/tags/javascript/"/>
+    
+      <category term="NodeJS" scheme="http://ericmbarnard.com/tags/nodejs/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Leaving, Learning and Teaching]]></title>
