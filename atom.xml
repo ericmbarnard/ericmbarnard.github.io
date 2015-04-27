@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Figuring it out... One step at a time.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://ericmbarnard.com/"/>
-  <updated>2015-04-27T14:32:53.814Z</updated>
+  <updated>2015-04-27T14:39:18.801Z</updated>
   <id>http://ericmbarnard.com/</id>
   
   <author>
@@ -19,9 +19,9 @@
     <link href="http://ericmbarnard.com/2015/04/using-hexo-for-static-websites.html"/>
     <id>http://ericmbarnard.com/2015/04/using-hexo-for-static-websites.html</id>
     <published>2015-04-27T12:56:35.000Z</published>
-    <updated>2015-04-27T14:32:53.814Z</updated>
-    <content type="html"><![CDATA[<h2 id="The_Problem">The Problem</h2><p>I’ve been doing some work to setup some basic websites (and moving my blog off of blogger). I really wanted to take advantage of a <a href="https://www.staticgen.com/" target="_blank" rel="external">static site generator</a>, and I wanted to utilize some of the best cheap hosting I could find (i.e. free). I know that I can point a custom domain to a <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> repository for nothing. GitHub Pages supports Jekyll as a static site generator - but I really didn’t want to have to go down the road of setting up Jekyll on my Windows machine (it runs on Ruby and I’ve had very little luck with all the Ruby Windows installation tools out there). I’m not against Ruby, and I have a Mac partition on my machine - but it’s not my primary working environment. <strong>What I really want is site generator that runs on both platforms, like on NodeJS.</strong></p>
-<h2 id="Enter_Hexo">Enter <a href="https://www.hexo.io" target="_blank" rel="external">Hexo</a></h2><p>I’ll spare the intro to Hexo - but suffice it to say it’s one of the more (if not most) popular NodeJS-based site generators out there. It’s actively contributed to (from folks all over the world) - and I found it quite easy to grok once I got started. The <a href="https://hexo.io/docs/" target="_blank" rel="external">Docs</a> are pretty good, and I was able to pretty much completely move my blog and build a custom theme over the course of a couple evenings.</p>
+    <updated>2015-04-27T14:39:18.801Z</updated>
+    <content type="html"><![CDATA[<h2 id="The_Problem">The Problem</h2><p>I’ve been doing some work to setup some basic websites (and moving my blog off of blogger). I really wanted to take advantage of a <a href="https://www.staticgen.com/" target="_blank" rel="external">static site generator</a>, and I wanted to utilize some of the best cheap hosting I could find (i.e. free). I know that I can point a custom domain to a <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> repository for nothing. GitHub Pages supports Jekyll as a static site generator - but I really didn’t want to have to go down the road of setting up Jekyll on my Windows machine (it runs on Ruby and I’ve had very little luck with all the Ruby Windows installation tools out there). I’m not against Ruby, and I have a Mac partition on my machine - but it’s not my primary working environment. <strong>What I really want is a site generator that runs on both platforms, like on NodeJS.</strong></p>
+<h2 id="Enter_Hexo">Enter <a href="https://www.hexo.io" target="_blank" rel="external">Hexo</a></h2><p>I’ll spare the intro to <a href="https://www.hexo.io" target="_blank" rel="external">Hexo</a> - but suffice it to say it’s one of the more (if not most) popular NodeJS-based site generators out there. It’s actively contributed to (from folks all over the world) - and I found it quite easy to grok once I got started. The <a href="https://hexo.io/docs/" target="_blank" rel="external">Docs</a> are pretty good, and I was able to pretty much completely move my blog and build a custom theme over the course of a couple evenings.</p>
 <h2 id="Why_Hexo?">Why Hexo?</h2><p>There were a number of things that helped me land on Hexo. For the most part it came down to: </p>
 <ul>
 <li>GitHub-Flavored Markdown support</li>
